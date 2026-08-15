@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#121922">
+<title>Previous Year Questions (PYQ) | Gourav Study Zone</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="brand-logo">GS</span><span>Gourav Study Zone</span></a>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+    <nav class="nav-links"><a class="" href="index.html">Home</a>
+<a class="" href="syllabus.html">Syllabus</a>
+<a class="" href="study-notes.html">Study Notes</a>
+<a class="active" href="pyq.html">PYQ</a>
+<a class="" href="suggestions.html">Suggestions</a>
+<a class="" href="interview.html">Interview</a>
+<a class="" href="jelet.html">JELET</a></nav>
+  </div>
+</header>
+<main class="container">
+
+<section class="page-hero">
+  <div class="crumbs"><a href="index.html">Home</a> › Previous Year Questions (PYQ)</div>
+  <h1 id="dynamicTitle">Previous Year Questions (PYQ)</h1>
+  <p>Select Semester → Subject → open the available Question Paper link(s).</p>
+</section>
+
+<div id="semesterSelector">
+  <div class="section-heading"><h2>Select Semester</h2></div>
+  <section class="semester-grid" id="semesterGrid"></section>
+</div>
+
+<a id="backToSemesters" class="btn btn-soft hidden" href="pyq.html">← Change Semester</a>
+
+<div id="resourceArea" class="hidden">
+  <div class="section-heading"><h2>Subjects & Resources</h2></div>
+  <div class="toolbar">
+    <input id="resourceSearch" class="search hidden" type="search" placeholder="Search subject...">
+  </div>
+  <section class="resource-grid" id="resourceGrid"></section>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <strong>📚 Gourav Study Zone</strong>
+    <small>© <span data-year></span> • Learn • Practice • Prepare • Succeed</small>
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="script.js"></script>
+<script>
+renderSemesterSelector("semesterGrid","pyq.html","Choose this semester to view subject-wise question papers.");
+renderSubjectResources("pyq","Previous Year Questions (PYQ)");
+</script>
+</body>
+</html>

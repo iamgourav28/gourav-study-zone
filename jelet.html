@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#121922">
+<title>JELET Preparation | Gourav Study Zone</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="brand-logo">GS</span><span>Gourav Study Zone</span></a>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+    <nav class="nav-links"><a class="" href="index.html">Home</a>
+<a class="" href="syllabus.html">Syllabus</a>
+<a class="" href="study-notes.html">Study Notes</a>
+<a class="" href="pyq.html">PYQ</a>
+<a class="" href="suggestions.html">Suggestions</a>
+<a class="" href="interview.html">Interview</a>
+<a class="active" href="jelet.html">JELET</a></nav>
+  </div>
+</header>
+<main class="container">
+
+<section class="page-hero">
+  <div class="crumbs"><a href="index.html">Home</a> › JELET Preparation</div>
+  <h1>🎯 JELET Preparation</h1>
+  <p>JELET syllabus, official notification link and year-wise previous question papers.</p>
+</section>
+
+<section class="jelet-top">
+  <article class="jelet-feature">
+    <div class="big-icon">📘</div>
+    <h3>JELET Syllabus</h3>
+    <p>Open your official/current JELET syllabus resource.</p>
+    <div id="jeletSyllabus"></div>
+  </article>
+
+  <article class="jelet-feature">
+    <div class="big-icon">🔔</div>
+    <h3>JELET Notifications</h3>
+    <p>Open the official JELET notification / update page.</p>
+    <div id="jeletNotification"></div>
+  </article>
+</section>
+
+<div class="section-heading"><h2>Year-wise Questions</h2></div>
+<article class="resource-card">
+  <h3>JELET Previous Year Question Papers</h3>
+  <div class="meta">Newest year first</div>
+  <div class="link-list" id="jeletQuestions"></div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <strong>📚 Gourav Study Zone</strong>
+    <small>© <span data-year></span> • Learn • Practice • Prepare • Succeed</small>
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="script.js"></script>
+<script>renderJELET();</script>
+</body>
+</html>
