@@ -115,6 +115,252 @@ function renderSubjectResources(type, titlePrefix){
   }
 }
 
+function renderStudyNotes(){
+
+  const sem = readSemester();
+
+  const params =
+    new URLSearchParams(window.location.search);
+
+  const selectedSubject =
+    params.get("subject");
+
+
+  const selector =
+    document.getElementById("semesterSelector");
+
+  const resources =
+    document.getElementById("resourceArea");
+
+  const pageTitle =
+    document.getElementById("dynamicTitle");
+
+  const back =
+    document.getElementById("backToSemesters");
+
+  const search =
+    document.getElementById("resourceSearch");
+
+  const grid =
+    document.getElementById("resourceGrid");
+
+
+  /* =========================
+     NO SEMESTER SELECTED
+  ========================= */
+
+  if(!sem){
+
+    selector.classList.remove("hidden");
+
+    resources.classList.add("hidden");
+
+    search.classList.add("hidden");
+
+    return;
+  }
+
+
+  const subjects =
+    SITE_DATA.studyNotes?.[sem] || [];
+
+
+  selector.classList.add("hidden");
+
+  resources.classList.remove("hidden");
+
+  back.classList.remove("hidden");
+
+
+  /* =========================
+     SUBJECT LIST
+  ========================= */
+
+  if(!selectedSubject){
+
+    pageTitle.textContent =
+      `Study Notes — Semester ${sem}`;
+
+    back.href =
+      "study-notes.html";
+
+    back.textContent =
+      "← Change Semester";
+
+
+    search.classList.remove("hidden");
+
+    search.placeholder =
+      "Search subject...";
+
+
+    function showSubjects(list){
+
+      if(!list.length){
+
+        grid.innerHTML = `
+          <div class="empty">
+            No subjects found.
+          </div>
+        `;
+
+        return;
+      }
+
+
+      grid.innerHTML =
+        list.map(subject => `
+
+          <article class="resource-card">
+
+            <h3>
+              📚 ${escapeHTML(subject.name)}
+            </h3>
+
+            <div class="meta">
+              Semester ${sem}
+            </div>
+
+            <p>
+              View all available notes for this subject.
+            </p>
+
+            <a
+              class="btn btn-blue"
+              href="study-notes.html?sem=${sem}&subject=${encodeURIComponent(subject.name)}">
+
+              Open Subject →
+
+            </a>
+
+          </article>
+
+        `).join("");
+    }
+
+
+    showSubjects(subjects);
+
+
+    search.oninput = () => {
+
+      const value =
+        search.value
+        .trim()
+        .toLowerCase();
+
+
+      const filtered =
+        subjects.filter(subject =>
+
+          subject.name
+          .toLowerCase()
+          .includes(value)
+
+        );
+
+
+      showSubjects(filtered);
+
+    };
+
+
+    return;
+  }
+
+
+
+  /* =========================
+     SELECTED SUBJECT NOTES
+  ========================= */
+
+  const subject =
+    subjects.find(
+
+      item =>
+        item.name === selectedSubject
+
+    );
+
+
+  search.classList.add("hidden");
+
+
+  back.href =
+    `study-notes.html?sem=${sem}`;
+
+  back.textContent =
+    "← Back to Subjects";
+
+
+  if(!subject){
+
+    pageTitle.textContent =
+      "Subject Not Found";
+
+
+    grid.innerHTML = `
+
+      <div class="empty">
+
+        This subject is not available.
+
+      </div>
+
+    `;
+
+    return;
+  }
+
+
+  pageTitle.textContent =
+    `${subject.name} — Notes`;
+
+
+  const noteLinks =
+    subject.links || [];
+
+
+  grid.innerHTML = `
+
+    <article class="resource-card">
+
+      <h3>
+        📚 ${escapeHTML(subject.name)}
+      </h3>
+
+      <div class="meta">
+        Semester ${sem}
+      </div>
+
+      <div class="link-list">
+
+        ${
+          noteLinks.length
+
+          ?
+
+          noteLinks
+          .map(resourceLinkHTML)
+          .join("")
+
+          :
+
+          `
+          <div class="empty">
+            Notes will be added soon.
+          </div>
+          `
+        }
+
+      </div>
+
+    </article>
+
+  `;
+
+}
+
 function renderSyllabus(){
   const grid = document.getElementById("syllabusGrid");
   if(!grid) return;
