@@ -41,17 +41,17 @@ const SITE_DATA = {
 
   // ---------- 2. STUDY NOTES ----------
   // Flow: Study Notes → Semester → Subjects → Notes Links
-studyNotes: {
+  studyNotes: {
     1: [
-      {
-        name: "Mathematics",
-        links: [
-          { label: "Unit 1 Notes", url: "YOUR-UNIT-1-DRIVE-LINK" },
-          { label: "Unit 2 Notes", url: "YOUR-UNIT-2-DRIVE-LINK" },
-          { label: "Unit 3 Notes", url: "YOUR-UNIT-3-DRIVE-LINK" },
-          { label: "Complete Mathematics Notes", url: "YOUR-COMPLETE-NOTES-LINK" }
-        ]
-      }
+      { name: "Subject 1", links: [
+        { label: "Open Notes", url: "#" }
+      ]},
+      { name: "Subject 2", links: [
+        { label: "Open Notes", url: "#" }
+      ]},
+      { name: "Subject 3", links: [
+        { label: "Open Notes", url: "#" }
+      ]}
     ],
     2: [
       { name: "Subject 1", links: [{ label: "Open Notes", url: "#" }] },
@@ -69,7 +69,7 @@ studyNotes: {
       { name: "Subject 3", links: [{ label: "Open Notes", url: "#" }] }
     ],
     5: [
-      { name: "Internet of Things", links: [{ label: "Open Notes", url: "#" }] },
+      { name: "Subject 1", links: [{ label: "Open Notes", url: "#" }] },
       { name: "Subject 2", links: [{ label: "Open Notes", url: "#" }] },
       { name: "Subject 3", links: [{ label: "Open Notes", url: "#" }] }
     ],
