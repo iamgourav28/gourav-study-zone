@@ -41,7 +41,7 @@ const SITE_DATA = {
 
   // ---------- 2. STUDY NOTES ----------
   // Flow: Study Notes → Semester → Subjects → Notes Links
-notes: {
+studyNotes: {
     1: [
       {
         name: "Mathematics",
