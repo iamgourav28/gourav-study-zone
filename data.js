@@ -31,12 +31,12 @@ const SITE_DATA = {
   // ---------- 1. SYLLABUS ----------
   // Flow: Syllabus → Semester → Drive Link
   syllabus: [
-    { semester: 1, url: "#" },
-    { semester: 2, url: "#" },
-    { semester: 3, url: "#" },
-    { semester: 4, url: "#" },
-    { semester: 5, url: "#" },
-    { semester: 6, url: "#" }
+    { semester: 1, url: "https://drive.google.com/file/d/1oGUlqwTdnlBdwIy5-WE9bd8EI9ROGX_X/view?usp=sharing" },
+    { semester: 2, url: "https://drive.google.com/file/d/1Yd41f7pv9z_p3leqg6wQS5r788G6aqJw/view?usp=sharing" },
+    { semester: 3, url: "https://drive.google.com/file/d/1-nB-iwzHYY9eSuu3jsob7bzXrE_5OAyw/view?usp=sharing" },
+    { semester: 4, url: "https://drive.google.com/file/d/1P4L14HQWEQP-owTfW5N8dAlJoGv3ey6m/view?usp=sharing" },
+    { semester: 5, url: "https://drive.google.com/file/d/19RlTDjhG86dCekLqCtpmBAjMm7uTVJP6/view?usp=sharing" },
+    { semester: 6, url: "https://drive.google.com/file/d/13VFcKhR7yHZlHDxWLpUHm3KsH2nY69-o/view?usp=sharing" }
   ],
 
   // ---------- 2. STUDY NOTES ----------
@@ -69,7 +69,7 @@ const SITE_DATA = {
       { name: "Subject 3", links: [{ label: "Open Notes", url: "#" }] }
     ],
     5: [
-      { name: "Subject 1", links: [{ label: "Open Notes", url: "#" }] },
+      { name: "Internet of Things", links: [{ label: "Open Notes", url: "#" }] },
       { name: "Subject 2", links: [{ label: "Open Notes", url: "#" }] },
       { name: "Subject 3", links: [{ label: "Open Notes", url: "#" }] }
     ],
