@@ -480,3 +480,533 @@ button,input{font:inherit}
   .section-heading h2{font-size:1.65rem}
   .page-hero{padding:29px 19px}
 }
+
+/* =========================================
+   COMPACT SOCIAL MEDIA SECTION
+========================================= */
+
+.compact-social{
+    margin:32px 0 20px;
+    padding:24px;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #F2FAFF,
+            #F6F3FF,
+            #FFF7FA
+        );
+
+    border:1px solid #E7EDF5;
+
+    box-shadow:
+        0 8px 24px rgba(30,70,120,0.08);
+}
+
+
+/* Heading */
+
+.compact-social-title{
+    text-align:center;
+    margin-bottom:18px;
+}
+
+.compact-social-title h2{
+    margin:0;
+
+    font-size:24px;
+    color:#123B66;
+}
+
+.compact-social-title p{
+    margin:6px 0 0;
+
+    font-size:13px;
+    color:#6B7280;
+}
+
+
+/* Grid */
+
+.compact-social-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:14px;
+}
+
+
+/* Card */
+
+.compact-social-card{
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 16px;
+
+    min-height:76px;
+
+    background:#FFFFFF;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    border:1px solid #E8ECF1;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.05);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.compact-social-card:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 10px 22px rgba(0,0,0,0.10);
+}
+
+
+/* Different Cards */
+
+.whatsapp-card{
+    border-left:4px solid #25D366;
+}
+
+.telegram-card{
+    border-left:4px solid #2AABEE;
+}
+
+.youtube-card{
+    border-left:4px solid #FF0000;
+}
+
+
+/* Icon */
+
+.compact-icon{
+    width:48px;
+    height:48px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+}
+
+
+.compact-icon svg{
+    width:30px;
+    height:30px;
+}
+
+
+.whatsapp-icon{
+    background:#E8FFF0;
+}
+
+.telegram-icon{
+    background:#E8F7FF;
+}
+
+.youtube-icon{
+    background:#FFF0F0;
+}
+
+
+/* Text */
+
+.compact-social-info{
+    text-align:left;
+}
+
+
+.compact-social-info h3{
+    margin:0 0 4px;
+
+    font-size:16px;
+
+    color:#183B5B;
+}
+
+
+.compact-social-info span{
+    font-size:12px;
+
+    font-weight:700;
+}
+
+
+/* Individual Link Color */
+
+.whatsapp-card span{
+    color:#16A34A;
+}
+
+.telegram-card span{
+    color:#1687C5;
+}
+
+.youtube-card span{
+    color:#DC2626;
+}
+
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media(max-width:700px){
+
+    .compact-social{
+        padding:18px 14px;
+        margin-top:25px;
+    }
+
+
+    .compact-social-title h2{
+        font-size:21px;
+    }
+
+
+    .compact-social-grid{
+        grid-template-columns:1fr;
+
+        gap:10px;
+    }
+
+
+    .compact-social-card{
+        min-height:68px;
+
+        padding:11px 13px;
+    }
+
+
+    .compact-icon{
+        width:43px;
+        height:43px;
+    }
+
+
+    .compact-icon svg{
+        width:27px;
+        height:27px;
+    }
+
+}
+
+/* ==================================================
+SELECTED SUBJECT NOTES - FULL WIDTH ONLY
+================================================== */
+
+/* যখন resource-grid এর ভিতরে শুধু একটি resource card থাকবে */
+.resource-grid > .resource-card:only-child{
+    grid-column:1 / -1;
+    width:100%;
+    max-width:none;
+}
+
+
+/* Selected subject-এর notes rows পুরো width */
+.resource-grid > .resource-card:only-child .link-list{
+    width:100%;
+}
+
+.resource-grid > .resource-card:only-child .resource-link{
+    width:100%;
+}
+
+/* Remove GS logo from header */
+.brand-logo{
+    display:none !important;
+}
+
+/* Remove extra gap beside brand text */
+.brand{
+    gap:0 !important;
+}
+
+/* ==================================================
+   ENGINEERING BOOKS HOME SECTION
+================================================== */
+
+.books-home-section{
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    margin:10px 0 42px;
+
+    padding:24px 28px;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef8ff,
+            #f3efff,
+            #fff7e8
+        );
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    transition:.3s ease;
+}
+
+.books-home-section:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-hover);
+}
+
+
+/* Icon */
+
+.books-home-icon{
+    width:70px;
+    height:70px;
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087fba,
+            #7657ff
+        );
+
+    font-size:34px;
+
+    box-shadow:
+        0 8px 20px rgba(108,99,255,.20);
+}
+
+
+/* Content */
+
+.books-home-content{
+    flex:1;
+}
+
+.books-small-title{
+    display:block;
+
+    margin-bottom:3px;
+
+    color:#7657ff;
+
+    font-size:11px;
+    font-weight:900;
+
+    letter-spacing:1px;
+}
+
+.books-home-content h2{
+    margin:0 0 5px;
+
+    color:#17324d;
+
+    font-size:23px;
+}
+
+.books-home-content p{
+    margin:0;
+
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+
+/* Button */
+
+.books-home-btn{
+    flex-shrink:0;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #087fba,
+            #7657ff
+        );
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:14px;
+    font-weight:800;
+
+    transition:.25s ease;
+}
+
+.books-home-btn:hover{
+    transform:translateY(-2px);
+}
+
+
+/* Mobile */
+
+@media(max-width:700px){
+
+    .books-home-section{
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:22px 18px;
+    }
+
+    .books-home-icon{
+        width:60px;
+        height:60px;
+
+        font-size:29px;
+    }
+
+    .books-home-content h2{
+        font-size:20px;
+    }
+
+    .books-home-btn{
+        width:100%;
+    }
+
+}
+
+/* ==================================================
+   ENGINEERING BOOK CARDS
+================================================== */
+
+.book-card{
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    gap:18px;
+}
+
+
+.book-card-top{
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+}
+
+
+.book-icon{
+    width:50px;
+    height:50px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf8ff,
+            #f1efff
+        );
+
+    font-size:27px;
+}
+
+
+.book-card h3{
+    margin:0 0 4px;
+}
+
+
+.book-download{
+    width:100%;
+}
+
+
+.book-disabled{
+    width:100%;
+
+    background:#f0f3f7;
+
+    color:#8895a5;
+
+    cursor:not-allowed;
+}
+
+
+/* Desktop - Books 2 columns */
+
+#booksGrid{
+    grid-template-columns:
+        repeat(2,1fr);
+}
+
+
+/* Mobile */
+
+@media(max-width:720px){
+
+    #booksGrid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* Engineering Books section full width */
+
+.books-home-section{
+    width:100% !important;
+    max-width:none !important;
+
+    display:flex;
+    align-items:center;
+
+    gap:24px;
+
+    margin:10px 0 42px;
+
+    padding:25px 30px;
+}
+
+.books-home-content{
+    flex:1;
+}
