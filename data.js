@@ -19,14 +19,10 @@ You normally do NOT need to edit the HTML/CSS files.
 const SITE_DATA = {
 
   // ---------- HOME PAGE LATEST UPDATES ----------
-  latestUpdates: [
-    "📚 Add your newest Study Notes update here.",
-    "📝 Add your newest PYQ update here.",
-    "🎯 Add an important exam / JELET update here."
-  ],
 
   notification:
-    "📢 Latest Update: Study Notes, PYQ, Suggestions, Interview Preparation & JELET Resources are available on Gourav Study Zone!",
+    "📢 Latest Update: All Semester PYQ , Suggestions, Importnat Notes & JELET Syllabus & PYQ are available on Gourav Study Zone!",
+    
 
   // ---------- 1. SYLLABUS ----------
   // Flow: Syllabus → Semester → Drive Link
@@ -36,7 +32,8 @@ const SITE_DATA = {
     { semester: 3, url: "https://drive.google.com/file/d/1-nB-iwzHYY9eSuu3jsob7bzXrE_5OAyw/view?usp=sharing" },
     { semester: 4, url: "https://drive.google.com/file/d/1P4L14HQWEQP-owTfW5N8dAlJoGv3ey6m/view?usp=sharing" },
     { semester: 5, url: "https://drive.google.com/file/d/19RlTDjhG86dCekLqCtpmBAjMm7uTVJP6/view?usp=sharing" },
-    { semester: 6, url: "https://drive.google.com/file/d/13VFcKhR7yHZlHDxWLpUHm3KsH2nY69-o/view?usp=sharing" }
+    { semester: 6, url: "https://drive.google.com/file/d/13VFcKhR7yHZlHDxWLpUHm3KsH2nY69-o/view?usp=sharing" },
+    { semester: "6 (ES)", url: "https://drive.google.com/file/d/1itJEHar6OuGr3y2ZW9P8OkgE4ETmfYOG/view?usp=sharing" }
   ],
 
   /* =====================================================
@@ -50,51 +47,76 @@ books: {
 
   1: [
     {
-      name: "Engineering Mathematics - I",
-      author: "Book / Author Name",
-      url: "#"
+      name: "Applied Physics I",
+      author: "D Choudhary",
+      url: "https://drive.google.com/file/d/1SkBZtRQpBv_G1KJ6oQeE5EmvitmF2XrB/view?usp=sharing"
     },
 
     {
-      name: "Applied Physics - I",
-      author: "Book / Author Name",
-      url: "#"
+      name: "Engineering Mathematics I",
+      author: "A Sarkar",
+      url: "https://drive.google.com/file/d/1sI5ui1-g7E36WKK-UFExB0t0t6PZEFca/view?usp=sharing"
     },
 
     {
       name: "Applied Chemistry",
-      author: "Book / Author Name",
-      url: "#"
+      author: "K Bhattacharya",
+      url: "https://drive.google.com/file/d/1IgchjjZzUQLkbEPitcqM4yQk6bBUS2k6/view?usp=sharing"
     }
   ],
 
 
   2: [
     {
-      name: "Engineering Mathematics - II",
-      author: "Book / Author Name",
-      url: "#"
+      name: "Engineering Mathematics II",
+      author: "A Sarkar",
+      url: "https://drive.google.com/file/d/1NBA8S26RKFcEyJ6lHrvjCg0LRjvUik0T/view?usp=sharing"
     },
 
     {
-      name: "Applied Physics - II",
-      author: "Book / Author Name",
-      url: "#"
+      name: "Applied Physics II",
+      author: "D Choudhary",
+      url: "https://drive.google.com/file/d/1XaOGcG_d3NzqGCY6mlPy_iZrMa-9mRQM/view?usp=sharing"
+    },
+    {
+      name: "Engineering Mechanics",
+      author: "Bhagabati Publication",
+      url: "https://drive.google.com/file/d/1VBYuLc4nAVsp7gjszoRhN_aqlfdPUP_k/view?usp=sharing"
+    },
+    {
+      name: "Fundamentals of Electrical & Electronics Engineering",
+      author: "Bhagabati Publication",
+      url: "https://drive.google.com/file/d/1e_Xdw2oOmz-bSvXHse9s6o5bHt4BH3cF/view?usp=sharing"
+    },
+    {
+      name: "Introduction to IT Systems",
+      author: "Bhagabati Publication",
+      url: "https://drive.google.com/file/d/1MRnHfQFUc5Lr7-ebM-Rb7hGUFzc4EXFy/view?usp=sharing"
     }
   ],
 
 
   3: [
     {
-      name: "Semester 3 Book 1",
-      author: "Book / Author Name",
-      url: "#"
+      name: "Let us C",
+      author: "Yashavant Kanetkar",
+      url: "https://drive.google.com/file/d/1iSgbvW8jSF7CFzgwzfHTHFw9INGajBj3/view?usp=sharing"
     },
 
     {
-      name: "Semester 3 Book 2",
-      author: "Book / Author Name",
-      url: "#"
+      name: "Let us Python",
+      author: "Yashavant Kanetkar / Aditya Kanetkar",
+      url: "https://drive.google.com/file/d/1M5uwFGbpKnsLggYfbwr_IVPAZ-3cslO4/view?usp=sharing"
+    },
+    {
+      name: "Data Structures and Algorithms",
+      author: "Narasimha Karumanchi",
+      url: "https://drive.google.com/file/d/17wdjBLxqi-uHxGit-Xx8Nguk0kiTMWnL/view?usp=sharing"
+    },
+    {
+      name: "Computer System Architecture",
+      author: "M. Morris Mano",
+      url: "https://drive.google.com/file/d/1iLQB88eyKwZeOoM1gS0uYFFdGy1BszTL/view?usp=sharing"
     }
   ],
 
@@ -110,9 +132,29 @@ books: {
 
   5: [
     {
-      name: "Semester 5 Book 1",
-      author: "Book / Author Name",
-      url: "#"
+      name: "The 8051 Microcontroller and Embedded Systems",
+      author: "Muhammad Ali Mazidi / Janice Gillispie Mazidi",
+      url: "https://drive.google.com/file/d/1zwZobDc3g2QODqnTVjI-ywZWtiQ69DbV/view?usp=sharing"
+    },
+    {
+      name: "Internet of Things",
+      author: "Arshdeep Bahga / Vijay Madisetti",
+      url: "https://drive.google.com/file/d/1iZ3e7LfcIGNgZ7IoRM2biP2YcGDZxHOD/view?usp=sharing"
+    },
+    {
+      name: "Mobile Computing",
+      author: "The McGraw-Hill Companies",
+      url: "https://drive.google.com/file/d/129zemI54YjiQFzxttckAh8IXUVUuN5kY/view?usp=sharing"
+    },
+    {
+      name: "Artificial Intelligence - A Modern Approach (3rd Edition)1",
+      author: "Stuart Russell / Peter Norvig",
+      url: "https://drive.google.com/file/d/14LV9KxxwCkS3B0bkJ9qUABVyFRrUc3VC/view?usp=sharing"
+    },
+    {
+      name: "Digital Image Processing 3rd Edition",
+      author: "R. Gonzalez / R. Woods",
+      url: "https://drive.google.com/file/d/1AXSC0AUCtEtBp9PdO5Mda_YcRQ4aKnrN/view?usp=sharing"
     }
   ],
 
