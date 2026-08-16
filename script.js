@@ -1,8 +1,20 @@
 (function(){
   const menuBtn = document.querySelector(".menu-btn");
   const navLinks = document.querySelector(".nav-links");
+
   if(menuBtn && navLinks){
-    menuBtn.addEventListener("click",()=>navLinks.classList.toggle("open"));
+    menuBtn.setAttribute("aria-expanded","false");
+    menuBtn.addEventListener("click",()=>{
+      const isOpen = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navLinks.querySelectorAll("a").forEach(link=>{
+      link.addEventListener("click",()=>{
+        navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded","false");
+      });
+    });
   }
 
   // Put current year in footer
@@ -15,6 +27,44 @@
   const updatesBox = document.querySelector("[data-updates]");
   if(updatesBox && typeof SITE_DATA !== "undefined"){
     updatesBox.innerHTML = SITE_DATA.latestUpdates.map(t=>`<div class="update-item">${escapeHTML(t)}</div>`).join("");
+  }
+
+  // Smooth reveal for both static and dynamically generated cards.
+  const revealSelector = ".service-card,.books-home-section,.quick-link-card,.compact-social,.how-card,.page-hero,.semester-card,.resource-card,.company-card,.jelet-feature";
+  let revealCount = 0;
+  const revealObserver = "IntersectionObserver" in window
+    ? new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add("in-view");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },{threshold:.08,rootMargin:"0px 0px -30px 0px"})
+    : null;
+
+  function prepareReveal(el){
+    if(!(el instanceof Element) || !el.matches(revealSelector) || el.classList.contains("reveal")) return;
+    revealCount += 1;
+    el.classList.add("reveal", `reveal-delay-${((revealCount-1)%3)+1}`);
+    if(revealObserver) revealObserver.observe(el);
+    else el.classList.add("in-view");
+  }
+
+  document.querySelectorAll(revealSelector).forEach(prepareReveal);
+
+  const mutationRoot = document.querySelector("main") || document.body;
+  if("MutationObserver" in window && mutationRoot){
+    const mutationObserver = new MutationObserver(records=>{
+      records.forEach(record=>{
+        record.addedNodes.forEach(node=>{
+          if(!(node instanceof Element)) return;
+          prepareReveal(node);
+          node.querySelectorAll?.(revealSelector).forEach(prepareReveal);
+        });
+      });
+    });
+    mutationObserver.observe(mutationRoot,{childList:true,subtree:true});
   }
 })();
 
