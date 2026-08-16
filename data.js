@@ -1082,11 +1082,29 @@ studyNotes: {
         { label: "2024 Question Paper", url: "https://drive.google.com/file/d/1HdfW4QwzvLdJTjy-MReuzWHr5jYzQrHM/view?usp=drive_link" },
         { label: "2023 Question Paper", url: "https://drive.google.com/file/d/1wy7TUEVgdA5tCKdHPB1vFbBgnbfily2j/view?usp=drive_link" }
       ]},
+      { name: "Advanced Computer Network", links: [
+        { label: "2026 Question Paper", url: "https://drive.google.com/file/d/18WR09gR7K5D2fpjidNBW0aZ6czlVNizI/view?usp=sharing" },
+        { label: "2025 Question Paper", url: "https://drive.google.com/file/d/1hW3utMd-GOZu_Fqp6NTf0mEWgN03NoFb/view?usp=sharing" },
+        { label: "2024 Question Paper", url: "#" },
+        { label: "2023 Question Paper", url: "https://drive.google.com/file/d/1WjBxza9v9S_MoGJk4m5zt1e_m49z9q2d/view?usp=sharing" }
+      ]},
+      { name: " Theory of Automata", links: [
+        { label: "2026 Question Paper", url: "https://drive.google.com/file/d/1pK1u8OiLLGB0tVUTlfLVfLUiXVSzUlSn/view?usp=sharing" },
+        { label: "2025 Question Paper", url: "https://drive.google.com/file/d/1Ir5GMtx-wmN46ocyOwaEyQOkDqFkl7rF/view?usp=sharing" },
+        { label: "2024 Question Paper", url: "https://drive.google.com/file/d/11vLz6leJ8XMNaZVf1Je5oAf5rjrWuYN7/view?usp=sharing" },
+        { label: "2023 Question Paper", url: "https://drive.google.com/file/d/1aRWXIF_jj9emhIzWIK9nifBDyj-hllVv/view?usp=sharing" }
+      ]},
       { name: "Fundamentals of AI", links: [
         { label: "2026 Question Paper", url: "https://drive.google.com/file/d/13rB3w78CwrZhQNI1Yr-pqJB1fr5OWoEi/view?usp=drive_link" },
         { label: "2025 Question Paper", url: "https://drive.google.com/file/d/1LVICUi69-7hnkFbfyMHLWxGpuOZEEi5i/view?usp=drive_link" },
         { label: "2024 Question Paper", url: "https://drive.google.com/file/d/1rEmUcNldBJb2MV8Fp7RNJWhAzVnque04/view?usp=drive_link" },
         { label: "2023 Question Paper", url: "https://drive.google.com/file/d/14WoQFST3AeP_C_7Mb3iC2Hw0gdi9_oQ7/view?usp=drive_link" }
+      ]},
+      { name: "Computer Graphics", links: [
+        { label: "2026 Question Paper", url: "#" },
+        { label: "2025 Question Paper", url: "#" },
+        { label: "2024 Question Paper", url: "https://drive.google.com/file/d/1cGc7-poRfIIvMAvJEh-U4pv8KERR6BEv/view?usp=sharing" },
+        { label: "2023 Question Paper", url: "https://drive.google.com/file/d/1IaDHwv37caWRMfIq2_V6LZb05hIWzTPD/view?usp=sharing" }
       ]},
       { name: "Digital Image Processing", links: [
         { label: "2026 Question Paper", url: "https://drive.google.com/file/d/1pToeM4ibavIRzox3S3-d0ieYuiTJRGgd/view?usp=drive_link" },
@@ -1096,7 +1114,14 @@ studyNotes: {
       ]}
     ],
     6: [
-      { name: " Cloud Computing", links: [
+      { name: "Data Warehousing & Data Mining", links: [
+        { label: "2026 Question Paper", url: "#" },
+        { label: "2025 Question Paper", url: "#" },
+        { label: "2024 Question Paper", url: "#" },
+        { label: "2023 Question Paper", url: "#" },
+        { label: "2022 Question Paper", url: "#" }
+      ]},
+     { name: " Cloud Computing", links: [
         { label: "2026 Question Paper", url: "#" },
         { label: "2025 Question Paper", url: "#" },
         { label: "2024 Question Paper", url: "#" },
@@ -1105,6 +1130,13 @@ studyNotes: {
         
       ]},
       { name: "Machine Learning", links: [
+        { label: "2026 Question Paper", url: "#" },
+        { label: "2025 Question Paper", url: "#" },
+        { label: "2024 Question Paper", url: "#" },
+        { label: "2023 Question Paper", url: "#" },
+        { label: "2022 Question Paper", url: "#" }
+      ]},
+      { name: "Web Designing", links: [
         { label: "2026 Question Paper", url: "#" },
         { label: "2025 Question Paper", url: "#" },
         { label: "2024 Question Paper", url: "#" },
@@ -1162,11 +1194,16 @@ studyNotes: {
       { name: "Microprocessor & Microcontroller (Based on 8086 & 8051", links: [{ label: "View Suggestion", url: "https://drive.google.com/file/d/1FQewbq0pLi8apFinnjq1d7IxtTMeuTd7/view?usp=drive_link" }] },
       { name: "IoT (Internet of Things)", links: [{ label: "View Suggestion", url: "https://drive.google.com/file/d/1Osd7KXZ_o7QMZDgMag-QVyiNxlAOWq1b/view?usp=drive_link" }] },
       { name: "Mobile Computing", links: [{ label: "View Suggestion", url: "https://drive.google.com/file/d/1iz3mzNuY8PIhk_SOnGlqGELeBY1VKsN9/view?usp=drive_link" }] },
+      { name: "Advanced Computer Network", links: [{ label: "View Suggestion", url: "#" }] },
+      { name: "Theory of Automata", links: [{ label: "View Suggestion", url: "#" }] },
       { name: "Fundamentals of AI", links: [{ label: "View Suggestion", url: "https://drive.google.com/file/d/1F2rQY-dY0oo0Y2MZDi0IPhjomTqFF-YP/view?usp=drive_link" }] },
+      { name: "Computer Graphics", links: [{ label: "View Suggestion", url: "#" }] },
       { name: "Digital Image Processing", links: [{ label: "View Suggestion", url: "https://drive.google.com/file/d/1pSmcD2yxmAlnwC0qBw6ganZZzAEio2kr/view?usp=sharing" }] }
     ],
     6: [
       { name: "Machine Learning", links: [{ label: "View Suggestion", url: "#" }] },
+      { name: "Web Designing", links: [{ label: "View Suggestion", url: "#" }] },
+      { name: "Data Warehousing & Data Mining", links: [{ label: "View Suggestion", url: "#" }] },
       { name: "Cloud Computing", links: [{ label: "View Suggestion", url: "#" }] },
       { name: "Engineering Economics and Project Management", links: [{ label: "View Suggestion", url: "#" }] },
       { name: "Entrepreneurship and Start-ups", links: [{ label: "View Suggestion", url: "#" }] }
