@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1">
+
+<meta
+  name="theme-color"
+  content="#121922">
+
+<title>
+Engineering Books | Gourav Study Zone
+</title>
+
+<link
+  rel="stylesheet"
+  href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+  <div class="container nav">
+
+    <a
+      class="brand"
+      href="index.html">
+
+      <span class="brand-logo">GS</span>
+
+      <span>
+        Gourav Study Zone
+      </span>
+
+    </a>
+
+
+    <button
+      class="menu-btn"
+      aria-label="Open menu">
+
+      ☰
+
+    </button>
+
+
+    <nav class="nav-links">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="syllabus.html">
+        Syllabus
+      </a>
+
+      <a href="study-notes.html">
+        Study Notes
+      </a>
+
+      <a href="pyq.html">
+        PYQ
+      </a>
+
+      <a href="suggestions.html">
+        Suggestions
+      </a>
+
+      <a href="interview.html">
+        Interview
+      </a>
+
+      <a href="jelet.html">
+        JELET
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main class="container">
+
+
+<section class="page-hero">
+
+  <div class="crumbs">
+
+    <a href="index.html">
+      Home
+    </a>
+
+    › Engineering Books
+
+  </div>
+
+
+  <h1 id="booksTitle">
+    Engineering Books
+  </h1>
+
+
+  <p>
+    Select Semester → choose your Book → Download.
+  </p>
+
+</section>
+
+
+
+<!-- Back Button -->
+
+<div
+  id="booksBack"
+  class="toolbar hidden">
+
+  <a
+    class="btn btn-soft"
+    href="books.html">
+
+    ← Change Semester
+
+  </a>
+
+</div>
+
+
+
+<!-- Section Heading -->
+
+<div class="section-heading">
+
+  <h2 id="booksHeading">
+    Select Semester
+  </h2>
+
+</div>
+
+
+
+<!-- Semester Grid -->
+
+<section
+  id="booksSemesterGrid"
+  class="semester-grid">
+
+</section>
+
+
+
+<!-- Books Grid -->
+
+<section
+  id="booksGrid"
+  class="resource-grid hidden">
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="site-footer">
+
+  <div class="container footer-inner">
+
+    <strong>
+      📚 Gourav Study Zone
+    </strong>
+
+    <small>
+      © <span data-year></span>
+      • Learn • Practice • Prepare • Succeed
+    </small>
+
+  </div>
+
+</footer>
+
+
+
+<script src="data.js"></script>
+
+<script src="script.js"></script>
+
+
+<script>
+
+/* ==================================================
+   ENGINEERING BOOKS PAGE
+================================================== */
+
+const booksParams =
+  new URLSearchParams(window.location.search);
+
+const booksSemester =
+  booksParams.get("sem");
+
+
+const semesterGrid =
+  document.getElementById("booksSemesterGrid");
+
+const booksGrid =
+  document.getElementById("booksGrid");
+
+const booksTitle =
+  document.getElementById("booksTitle");
+
+const booksHeading =
+  document.getElementById("booksHeading");
+
+const booksBack =
+  document.getElementById("booksBack");
+
+
+
+/* =========================
+   SHOW SEMESTERS
+========================= */
+
+if(!booksSemester){
+
+  semesterGrid.innerHTML =
+
+    [1,2,3,4,5,6]
+
+    .map(sem => `
+
+      <article class="semester-card">
+
+        <div class="semester-number">
+          ${sem}
+        </div>
+
+        <h3>
+          Semester ${sem}
+        </h3>
+
+        <p>
+          View available engineering books.
+        </p>
+
+        <a
+          class="btn btn-blue"
+          href="books.html?sem=${sem}">
+
+          View Books →
+
+        </a>
+
+      </article>
+
+    `)
+
+    .join("");
+
+}
+
+
+
+/* =========================
+   SHOW BOOKS
+========================= */
+
+else{
+
+  const semesterBooks =
+    SITE_DATA.books?.[booksSemester] || [];
+
+
+  booksTitle.textContent =
+    `Engineering Books — Semester ${booksSemester}`;
+
+
+  booksHeading.textContent =
+    `Semester ${booksSemester} Books`;
+
+
+  semesterGrid.classList.add("hidden");
+
+  booksGrid.classList.remove("hidden");
+
+  booksBack.classList.remove("hidden");
+
+
+  if(!semesterBooks.length){
+
+    booksGrid.innerHTML = `
+
+      <div class="empty">
+
+        Books will be added soon.
+
+      </div>
+
+    `;
+
+  }
+
+  else{
+
+    booksGrid.innerHTML =
+
+      semesterBooks
+
+      .map(book => {
+
+        const hasLink =
+          book.url &&
+          book.url !== "#";
+
+
+        return `
+
+          <article class="resource-card book-card">
+
+            <div class="book-card-top">
+
+              <div class="book-icon">
+                📘
+              </div>
+
+              <div>
+
+                <h3>
+                  ${book.name}
+                </h3>
+
+                <div class="meta">
+                  ${book.author || "Engineering Book"}
+                </div>
+
+              </div>
+
+            </div>
+
+
+            ${
+              hasLink
+
+              ?
+
+              `
+
+              <a
+                class="btn btn-blue book-download"
+                href="${book.url}"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                ⬇ Download Book
+
+              </a>
+
+              `
+
+              :
+
+              `
+
+              <span
+                class="btn book-disabled">
+
+                Book Coming Soon
+
+              </span>
+
+              `
+            }
+
+          </article>
+
+        `;
+
+      })
+
+      .join("");
+
+  }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
