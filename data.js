@@ -706,7 +706,7 @@ studyNotes: {
           url: "https://drive.google.com/file/d/1aB1ESyeRK9rXyKDDpGlMWB2ld_GkC25p/view?usp=sharing"
         },
         {
-          label: "Unit 2 NotesUNIT 2 — IoT Protocols Imp Qns",
+          label: "UNIT 2 — IoT Protocols Imp Qns",
           url: "https://drive.google.com/file/d/1ps8KyyP-5P2vJIu9R9uX48q7ITbEh666/view?usp=sharing"
         },
         {
@@ -732,8 +732,33 @@ studyNotes: {
       ]
 
     },
+     {
+      name: "Mobile Computing",
+      links: [
+        {
+          label: "Unit 1 Notes",
+          url: "#"
+        },
+        {
+          label: "Unit 2 Notes",
+          url: "#"
+        },
+        {
+          label: "Unit 3 Notes",
+          url: "#"
+        },
+        {
+          label: "Unit 4 Notes",
+          url: "#"
+        },
+        {
+          label: "Complete Subject Notes",
+          url: "#"
+        }
+      ]
+    },
           {
-      name: "Mobile computing",
+      name: "Advanced Computer Network",
       links: [
         {
           label: "Unit 1 Notes",
@@ -757,6 +782,31 @@ studyNotes: {
         }
       ]
 
+    },
+     {
+      name: "Theory of Automata",
+      links: [
+        {
+          label: "Unit 1 Notes",
+          url: "#"
+        },
+        {
+          label: "Unit 2 Notes",
+          url: "#"
+        },
+        {
+          label: "Unit 3 Notes",
+          url: "#"
+        },
+        {
+          label: "Unit 4 Notes",
+          url: "#"
+        },
+        {
+          label: "Complete Subject Notes",
+          url: "#"
+        }
+      ]
     },
           {
       name: "Fundamentals of AI",
@@ -783,6 +833,31 @@ studyNotes: {
         }
       ]
 
+    },
+     {
+      name: "Computer Graphics",
+      links: [
+        {
+          label: "Unit 1 Notes",
+          url: "#"
+        },
+        {
+          label: "Unit 2 Notes",
+          url: "#"
+        },
+        {
+          label: "Unit 3 Notes",
+          url: "#"
+        },
+        {
+          label: "Unit 4 Notes",
+          url: "#"
+        },
+        {
+          label: "Complete Subject Notes",
+          url: "#"
+        }
+      ]
     },
     {
       name: "Digital Image Processing",
@@ -813,6 +888,31 @@ studyNotes: {
     ],
     6: [
       {
+      name: "Data Warehousing & Data Mining",
+      links: [
+        {
+          label: "Unit 1 Notes",
+          url: "#"
+        },
+        {
+          label: "Unit 2 Notes",
+          url: "#"
+        },
+        {
+          label: "Unit 3 Notes",
+          url: "#"
+        },
+        {
+          label: "Unit 4 Notes",
+          url: "#"
+        },
+        {
+          label: "Complete Subject Notes",
+          url: "#"
+        }
+      ]
+    },
+     {
       name: "Cloud Computing",
       links: [
         {
@@ -862,6 +962,31 @@ studyNotes: {
         }
       ]
 
+    },
+     {
+      name: "Web Designing",
+      links: [
+        {
+          label: "Unit 1 Notes",
+          url: "#"
+        },
+        {
+          label: "Unit 2 Notes",
+          url: "#"
+        },
+        {
+          label: "Unit 3 Notes",
+          url: "#"
+        },
+        {
+          label: "Unit 4 Notes",
+          url: "#"
+        },
+        {
+          label: "Complete Subject Notes",
+          url: "#"
+        }
+      ]
     },
           {
       name: "Engineering Economics and Project Management",
