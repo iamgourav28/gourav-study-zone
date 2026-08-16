@@ -210,7 +210,6 @@ function renderStudyNotes(){
 
       grid.innerHTML =
         list.map(subject => `
-
           <article class="resource-card">
 
             <h3>
