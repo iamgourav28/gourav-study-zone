@@ -1340,6 +1340,14 @@ studyNotes: {
   // Flow: Interview → Company → Preparation Links
   interview: [
     {
+      company: "Basics Preparation",
+      links: [
+        { label: "Programming Preparation", url: "#" },
+        { label: "Most Interview Questions", url: "#" },
+        { label: "Aptitdte Questions", url: "#" }
+      ]
+    }, 
+   {
       company: "TCS",
       links: [
         { label: "Aptitude Preparation", url: "#" },
