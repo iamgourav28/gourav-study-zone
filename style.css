@@ -796,3 +796,1373 @@ button,input{font:inherit}
   .hero-highlights span{font-size:.68rem;padding:6px 9px}
   .footer-inner{justify-content:center;text-align:center}
 }
+
+/* =====================================================
+   GOURAV STUDY ZONE
+   WEBSITE REVIEW + GOOGLE FORM POPUP
+===================================================== */
+
+
+/* =====================================================
+   REVIEW SECTION
+===================================================== */
+
+.gsz-review-section{
+
+    width:100%;
+
+    margin:0;
+
+    padding:20px 0;
+
+    box-sizing:border-box;
+
+}
+
+
+/* =====================================================
+   FULL WIDTH REVIEW CARD
+===================================================== */
+
+.gsz-review-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    width:100%;
+
+    max-width:none;
+
+    margin:0;
+
+    padding:65px 35px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #fafaff 50%,
+            #f7fbff 100%
+        );
+
+    border:
+        1px solid
+        rgba(99,102,241,.10);
+
+    border-radius:28px;
+
+    box-shadow:
+        0 15px 45px
+        rgba(15,23,42,.08);
+
+    box-sizing:border-box;
+
+}
+
+
+/* Decorative Glow - Right */
+
+.gsz-review-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    top:-150px;
+    right:-120px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #8b5cf6
+        );
+
+    opacity:.08;
+
+    pointer-events:none;
+
+}
+
+
+/* Decorative Glow - Left */
+
+.gsz-review-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:230px;
+    height:230px;
+
+    bottom:-140px;
+    left:-110px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #06b6d4,
+            #14b8a6
+        );
+
+    opacity:.08;
+
+    pointer-events:none;
+
+}
+
+
+/* =====================================================
+   REVIEW ICON
+===================================================== */
+
+.gsz-review-icon{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    width:70px;
+    height:70px;
+
+    margin:
+        0 auto 15px;
+
+    font-size:32px;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #ecfeff
+        );
+
+    box-shadow:
+        0 10px 28px
+        rgba(99,102,241,.15);
+
+    animation:
+        gszIconFloat
+        3s ease-in-out infinite;
+
+}
+
+
+@keyframes gszIconFloat{
+
+    0%,
+    100%{
+        transform:
+            translateY(0);
+    }
+
+    50%{
+        transform:
+            translateY(-7px);
+    }
+
+}
+
+
+/* =====================================================
+   BADGE
+===================================================== */
+
+.gsz-review-badge{
+
+    position:relative;
+
+    z-index:2;
+
+    display:inline-block;
+
+    padding:
+        8px 17px;
+
+    margin-bottom:18px;
+
+    border-radius:30px;
+
+    background:#eef2ff;
+
+    color:#4f46e5;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.gsz-review-card h2{
+
+    position:relative;
+
+    z-index:2;
+
+    margin:
+        8px 0 18px;
+
+    color:#17345c;
+
+    font-size:
+        clamp(
+            28px,
+            4vw,
+            48px
+        );
+
+    line-height:1.2;
+
+    font-weight:800;
+
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.gsz-review-description{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:850px;
+
+    margin:
+        0 auto;
+
+    color:#64748b;
+
+    font-size:
+        clamp(
+            15px,
+            2vw,
+            19px
+        );
+
+    line-height:1.7;
+
+}
+
+
+/* =====================================================
+   ANIMATED STARS
+===================================================== */
+
+.gsz-stars{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+
+    margin:
+        30px 0 18px;
+
+}
+
+
+.gsz-stars span{
+
+    display:inline-block;
+
+    color:#fbbf24;
+
+    font-size:
+        clamp(
+            32px,
+            5vw,
+            45px
+        );
+
+    text-shadow:
+        0 5px 14px
+        rgba(245,158,11,.25);
+
+    animation:
+        gszStarAnimation
+        2s ease-in-out infinite;
+
+}
+
+
+.gsz-stars span:nth-child(1){
+    animation-delay:0s;
+}
+
+.gsz-stars span:nth-child(2){
+    animation-delay:.12s;
+}
+
+.gsz-stars span:nth-child(3){
+    animation-delay:.24s;
+}
+
+.gsz-stars span:nth-child(4){
+    animation-delay:.36s;
+}
+
+.gsz-stars span:nth-child(5){
+    animation-delay:.48s;
+}
+
+
+@keyframes gszStarAnimation{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-7px)
+            scale(1.08);
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL TEXT
+===================================================== */
+
+.gsz-small-text{
+
+    position:relative;
+
+    z-index:2;
+
+    margin:
+        0 0 25px;
+
+    color:#475569;
+
+    font-size:
+        clamp(
+            14px,
+            2vw,
+            16px
+        );
+
+}
+
+
+/* =====================================================
+   GIVE FEEDBACK BUTTON
+===================================================== */
+
+.gsz-feedback-btn{
+
+    position:relative;
+
+    z-index:2;
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+
+    padding:
+        15px 30px;
+
+    border:0;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #7c3aed,
+            #06b6d4
+        );
+
+    background-size:
+        200% 200%;
+
+    box-shadow:
+        0 12px 28px
+        rgba(79,70,229,.28);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+    animation:
+        gszButtonGradient
+        5s ease infinite;
+
+}
+
+
+@keyframes gszButtonGradient{
+
+    0%{
+        background-position:
+            0% 50%;
+    }
+
+    50%{
+        background-position:
+            100% 50%;
+    }
+
+    100%{
+        background-position:
+            0% 50%;
+    }
+
+}
+
+
+.gsz-feedback-btn:hover{
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 18px 36px
+        rgba(79,70,229,.35);
+
+}
+
+
+.gsz-feedback-btn:active{
+
+    transform:
+        scale(.97);
+
+}
+
+
+/* =====================================================
+   GOOGLE FORM MODAL
+===================================================== */
+
+.gsz-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:999999;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:15px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease;
+
+}
+
+
+/* Modal Active */
+
+.gsz-modal.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+/* =====================================================
+   DARK OVERLAY
+===================================================== */
+
+.gsz-modal-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        rgba(15,23,42,.76);
+
+    backdrop-filter:
+        blur(7px);
+
+}
+
+
+/* =====================================================
+   MODAL BOX
+===================================================== */
+
+.gsz-modal-box{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:900px;
+
+    height:94vh;
+
+    max-height:94vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    box-shadow:
+        0 30px 100px
+        rgba(0,0,0,.38);
+
+    transform:
+        translateY(30px)
+        scale(.96);
+
+    transition:
+        transform .35s
+        cubic-bezier(
+            .2,
+            .8,
+            .2,
+            1
+        );
+
+}
+
+
+/* Open Animation */
+
+.gsz-modal.active
+.gsz-modal-box{
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* =====================================================
+   MODAL HEADER
+===================================================== */
+
+.gsz-modal-header{
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:
+        space-between;
+
+    gap:15px;
+
+    padding:
+        17px 22px;
+
+    border-bottom:
+        1px solid #e2e8f0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #eef2ff
+        );
+
+}
+
+
+.gsz-modal-label{
+
+    display:block;
+
+    margin-bottom:3px;
+
+    color:#6366f1;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+
+.gsz-modal-header h3{
+
+    margin:0;
+
+    color:#172033;
+
+    font-size:
+        clamp(
+            19px,
+            3vw,
+            25px
+        );
+
+}
+
+
+/* =====================================================
+   CLOSE BUTTON
+===================================================== */
+
+.gsz-close-btn{
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    width:43px;
+    height:43px;
+
+    padding:0;
+
+    border:0;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:#ffffff;
+
+    color:#475569;
+
+    font-size:28px;
+
+    line-height:1;
+
+    box-shadow:
+        0 5px 18px
+        rgba(15,23,42,.12);
+
+    transition:
+        all .25s ease;
+
+}
+
+
+.gsz-close-btn:hover{
+
+    color:white;
+
+    background:#ef4444;
+
+    transform:
+        rotate(90deg);
+
+}
+
+
+/* =====================================================
+   GOOGLE FORM AREA
+===================================================== */
+
+.gsz-form-wrapper{
+
+    flex:1;
+
+    width:100%;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    background:#f8fafc;
+
+    -webkit-overflow-scrolling:touch;
+
+}
+
+
+.gsz-form-wrapper iframe{
+
+    display:block;
+
+    width:100%;
+
+    height:2381px;
+
+    border:0;
+
+    background:#f8fafc;
+
+}
+
+
+/* =====================================================
+   STOP MAIN PAGE SCROLL WHEN POPUP IS OPEN
+===================================================== */
+
+body.gsz-modal-open{
+
+    overflow:hidden;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:768px){
+
+    .gsz-review-section{
+
+        padding:
+            15px 0;
+
+    }
+
+
+    .gsz-review-card{
+
+        padding:
+            50px 22px;
+
+        border-radius:24px;
+
+    }
+
+
+    .gsz-review-description{
+
+        max-width:650px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    .gsz-review-section{
+
+        width:100%;
+
+        padding:
+            10px 0;
+
+    }
+
+
+    .gsz-review-card{
+
+        width:100%;
+
+        max-width:none;
+
+        padding:
+            40px 17px;
+
+        border-radius:20px;
+
+    }
+
+
+    .gsz-review-icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:27px;
+
+    }
+
+
+    .gsz-review-badge{
+
+        font-size:12px;
+
+    }
+
+
+    .gsz-stars{
+
+        gap:4px;
+
+        margin:
+            25px 0 15px;
+
+    }
+
+
+    .gsz-feedback-btn{
+
+        width:100%;
+
+        max-width:330px;
+
+        padding:
+            15px 18px;
+
+    }
+
+
+    /* Mobile Popup */
+
+    .gsz-modal{
+
+        padding:6px;
+
+    }
+
+
+    .gsz-modal-box{
+
+        width:100%;
+
+        height:97vh;
+
+        max-height:97vh;
+
+        border-radius:17px;
+
+    }
+
+
+    .gsz-modal-header{
+
+        padding:
+            14px 14px;
+
+    }
+
+
+    .gsz-close-btn{
+
+        width:39px;
+
+        height:39px;
+
+        font-size:25px;
+
+    }
+
+
+    .gsz-form-wrapper iframe{
+
+        width:100%;
+
+        height:2381px;
+
+    }
+
+}
+
+
+/* =====================================================
+   REDUCE ANIMATION IF USER PREFERS
+===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    .gsz-review-icon,
+    .gsz-stars span,
+    .gsz-feedback-btn{
+
+        animation:none;
+
+    }
+
+}
+
+/* =========================================
+   GOURAV STUDY ZONE - NOTIFICATIONS
+========================================= */
+
+.gsz-notification-section{
+
+    width:100%;
+
+    padding:30px 0;
+
+}
+
+
+.gsz-notification-container{
+
+    width:100%;
+
+    padding:45px 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f8faff
+        );
+
+    border-radius:28px;
+
+    border:
+        1px solid rgba(99,102,241,.10);
+
+    box-shadow:
+        0 15px 45px rgba(15,23,42,.08);
+
+}
+
+
+/* Header */
+
+.gsz-notification-header{
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:space-between;
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+
+.gsz-notification-label{
+
+    display:inline-block;
+
+    margin-bottom:8px;
+
+    padding:7px 14px;
+
+    border-radius:30px;
+
+    background:#eef2ff;
+
+    color:#4f46e5;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+
+.gsz-notification-header h2{
+
+    margin:0 0 8px;
+
+    color:#17345c;
+
+    font-size:
+        clamp(27px,4vw,40px);
+
+}
+
+
+.gsz-notification-header p{
+
+    margin:0;
+
+    color:#64748b;
+
+    line-height:1.6;
+
+}
+
+
+/* Notification List */
+
+.gsz-notification-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:13px;
+
+}
+
+
+/* Single Notification */
+
+.gsz-notification-item{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:17px;
+
+    padding:18px 20px;
+
+    border-radius:18px;
+
+    background:#ffffff;
+
+    border:
+        1px solid #e8edf5;
+
+    transition:.3s ease;
+
+}
+
+
+.gsz-notification-item:hover{
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(15,23,42,.10);
+
+    border-color:
+        rgba(99,102,241,.25);
+
+}
+
+
+/* Icon */
+
+.gsz-notification-icon{
+
+    flex-shrink:0;
+
+    width:50px;
+    height:50px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #ecfeff
+        );
+
+    font-size:23px;
+
+}
+
+
+/* Content */
+
+.gsz-notification-content{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+
+.gsz-notification-top{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-bottom:5px;
+
+}
+
+
+.gsz-notification-title{
+
+    margin:0;
+
+    color:#1e293b;
+
+    font-size:16px;
+
+    font-weight:700;
+
+}
+
+
+.gsz-notification-date{
+
+    margin:5px 0 0;
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+}
+
+
+/* NEW badge */
+
+.gsz-new-badge{
+
+    display:inline-block;
+
+    padding:4px 8px;
+
+    border-radius:20px;
+
+    color:#ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ef4444,
+            #f97316
+        );
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    animation:
+        gszNewPulse
+        1.5s ease-in-out infinite;
+
+}
+
+
+@keyframes gszNewPulse{
+
+    0%,
+    100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+}
+
+
+/* View Button */
+
+.gsz-notification-link{
+
+    flex-shrink:0;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:5px;
+
+    padding:10px 15px;
+
+    border-radius:11px;
+
+    color:#4f46e5;
+
+    background:#eef2ff;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.25s ease;
+
+}
+
+
+.gsz-notification-link:hover{
+
+    color:#ffffff;
+
+    background:#4f46e5;
+
+}
+
+
+/* View All */
+
+.gsz-view-all-btn{
+
+    border:0;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-weight:700;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #7c3aed,
+            #06b6d4
+        );
+
+}
+
+
+/* Empty notification */
+
+.gsz-no-notification{
+
+    display:none;
+
+    padding:30px;
+
+    text-align:center;
+
+    color:#64748b;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:650px){
+
+    .gsz-notification-section{
+
+        padding:15px 0;
+
+    }
+
+
+    .gsz-notification-container{
+
+        padding:
+            32px 16px;
+
+        border-radius:20px;
+
+    }
+
+
+    .gsz-notification-header{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+
+    .gsz-notification-item{
+
+        align-items:flex-start;
+
+        padding:
+            15px 14px;
+
+    }
+
+
+    .gsz-notification-icon{
+
+        width:44px;
+        height:44px;
+
+        font-size:20px;
+
+    }
+
+
+    .gsz-notification-top{
+
+        flex-wrap:wrap;
+
+    }
+
+
+    .gsz-notification-link{
+
+        padding:
+            9px 11px;
+
+    }
+
+}
