@@ -115,6 +115,69 @@
 </section>
 
 <!-- =========================================
+     LATEST NOTIFICATIONS SECTION
+========================================= -->
+
+<section class="gsz-notification-section">
+
+    <div class="gsz-notification-container">
+
+        <!-- Header -->
+
+        <div class="gsz-notification-header">
+
+            <div>
+
+                <span class="gsz-notification-label">
+                    🔔 Stay Updated
+                </span>
+
+                <h2>
+                    Latest Notifications
+                </h2>
+
+                <p>
+                    Get the latest notes, syllabus, PYQs
+                    and study material updates.
+                </p>
+
+            </div>
+
+
+            <button
+                class="gsz-view-all-btn"
+                id="gszViewAllNotifications"
+                type="button"
+            >
+                View All
+            </button>
+
+        </div>
+
+
+        <!-- Notifications -->
+
+        <div
+            class="gsz-notification-list"
+            id="gszNotificationList"
+        >
+        </div>
+
+
+        <!-- Empty Message -->
+
+        <div
+            class="gsz-no-notification"
+            id="gszNoNotification"
+        >
+            🔔 No notifications available.
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
      USEFUL QUICK LINKS
 ========================================= -->
 
@@ -277,6 +340,141 @@
 
 
 
+<!-- =================================================
+     GOURAV STUDY ZONE - WEBSITE REVIEW SECTION
+================================================= -->
+
+<section class="gsz-review-section">
+
+    <div class="gsz-review-card">
+
+        <!-- Review Icon -->
+        <div class="gsz-review-icon">
+            💬
+        </div>
+
+
+        <!-- Small Badge -->
+        <span class="gsz-review-badge">
+            Your Opinion Matters
+        </span>
+
+
+        <!-- Heading -->
+        <h2>
+            Enjoying Gourav Study Zone?
+        </h2>
+
+
+        <!-- Description -->
+        <p class="gsz-review-description">
+            Your feedback helps us improve our website and provide
+            better study notes and resources for students.
+        </p>
+
+
+        <!-- Animated Stars -->
+        <div class="gsz-stars" aria-label="5 Star Rating">
+
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+
+        </div>
+
+
+        <!-- Small Text -->
+        <p class="gsz-small-text">
+            ⭐ Rate us and share your valuable suggestions
+        </p>
+
+
+        <!-- Feedback Button -->
+        <button
+            type="button"
+            class="gsz-feedback-btn"
+            id="gszOpenFeedback"
+        >
+            ✍️ Give Feedback
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =================================================
+     GOOGLE FORM FEEDBACK POPUP
+================================================= -->
+
+<div
+    class="gsz-modal"
+    id="gszFeedbackModal"
+    aria-hidden="true"
+>
+
+    <!-- Dark Background -->
+    <div
+        class="gsz-modal-overlay"
+        id="gszModalOverlay"
+    ></div>
+
+
+    <!-- Popup Box -->
+    <div
+        class="gsz-modal-box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="gszModalTitle"
+    >
+
+
+        <!-- Popup Header -->
+        <div class="gsz-modal-header">
+
+            <div>
+
+                <span class="gsz-modal-label">
+                    ⭐ Website Review
+                </span>
+
+                <h3 id="gszModalTitle">
+                    Share Your Feedback
+                </h3>
+
+            </div>
+
+
+            <!-- Close Button -->
+            <button
+                type="button"
+                class="gsz-close-btn"
+                id="gszCloseFeedback"
+                aria-label="Close Feedback Form"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- Google Form -->
+        <div class="gsz-form-wrapper">
+
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeH325P98_yTpgmYjR6-9ZiyP5BVNeWKZD_a8o0S6agATGmDA/viewform?embedded=true"
+                title="Gourav Study Zone Website Feedback Form"
+                loading="lazy"
+            >
+                Loading…
+            </iframe>
+
+        </div>
+
+    </div>
+
+</div>
 
 </main>
 <footer class="site-footer">
