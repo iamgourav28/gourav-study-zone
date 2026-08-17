@@ -458,3 +458,486 @@ function renderJELET(){
   const mo = new MutationObserver(()=>requestAnimationFrame(applyReveal));
   mo.observe(document.body,{childList:true,subtree:true});
 })();
+
+/* =====================================================
+   GOURAV STUDY ZONE
+   FEEDBACK POPUP
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const modal =
+        document.getElementById("gszFeedbackModal");
+
+    const openButton =
+        document.getElementById("gszOpenFeedback");
+
+    const closeButton =
+        document.getElementById("gszCloseFeedback");
+
+    const overlay =
+        document.getElementById("gszModalOverlay");
+
+
+    /* Safety Check */
+
+    if (
+        !modal ||
+        !openButton ||
+        !closeButton ||
+        !overlay
+    ) {
+        return;
+    }
+
+
+    /* ==========================
+       OPEN POPUP
+    ========================== */
+
+    function openFeedbackModal() {
+
+        modal.classList.add("active");
+
+        modal.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        document.body.classList.add(
+            "gsz-modal-open"
+        );
+
+
+        setTimeout(function () {
+
+            closeButton.focus();
+
+        }, 250);
+
+    }
+
+
+    /* ==========================
+       CLOSE POPUP
+    ========================== */
+
+    function closeFeedbackModal() {
+
+        modal.classList.remove("active");
+
+        modal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.classList.remove(
+            "gsz-modal-open"
+        );
+
+    }
+
+
+    /* Give Feedback */
+
+    openButton.addEventListener(
+        "click",
+        openFeedbackModal
+    );
+
+
+    /* X Button */
+
+    closeButton.addEventListener(
+        "click",
+        closeFeedbackModal
+    );
+
+
+    /* Outside Click */
+
+    overlay.addEventListener(
+        "click",
+        closeFeedbackModal
+    );
+
+
+    /* ESC Key */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape" &&
+                modal.classList.contains("active")
+            ) {
+
+                closeFeedbackModal();
+
+            }
+
+        }
+    );
+
+});
+
+/* =============================================
+   GOURAV STUDY ZONE - NOTIFICATION SYSTEM
+============================================= */
+
+
+const gszNotifications = [
+
+    {
+        title:
+            "Digital Image Procesing All Units Imp. Qns. & Ans. Notes Added",
+
+        date:
+            "15 Aug 2026",
+
+        icon:
+            "📚",
+
+        link:
+            "study-notes.html?sem=5&subject=Digital%20Image%20Processing",
+
+        isNew:
+            true
+    },
+
+    {
+        title:
+            "Internet of Things All Units Imp. Qns. & Ans. Notes Added",
+
+        date:
+            "15 Aug 2026",
+
+        icon:
+            "📚",
+
+        link:
+            "study-notes.html?sem=5&subject=IoT%20(Internet%20of%20Things)",
+
+        isNew:
+            true
+    },
+
+    {
+        title:
+            "Third Semester PYQ Base Suggestions Available",
+
+        date:
+            "13 Aug 2026",
+
+        icon:
+            "🔥",
+
+        link:
+            "suggestions.html?sem=3",
+
+        isNew:
+            true
+    },
+
+
+    {
+        title:
+            "Fifth Semester PYQ Base Suggestions Available",
+
+        date:
+            "13 Aug 2026",
+
+        icon:
+            "🔥",
+
+        link:
+            "suggestions.html?sem=5",
+
+        isNew:
+            false
+    },
+    {
+        title:
+            "Fifth Semester Previous Year Questions Uploaded",
+        date:
+            "12 Aug 2026",
+
+        icon:
+            "🔥",
+
+        link:
+            "pyq.html?sem=5",
+
+        isNew:
+            true
+    },
+    {
+        title:
+            "Third Semester Previous Year Questions Uploaded",
+        date:
+            "12 Aug 2026",
+
+        icon:
+            "🔥",
+
+        link:
+            "pyq.html?sem=3",
+
+        isNew:
+            true
+    },
+    
+    {
+        title:
+            "First Semester Previous Year Questions Uploaded",
+        date:
+            "12 Aug 2026",
+
+        icon:
+            "🔥",
+
+        link:
+            "pyq.html?sem=1",
+
+        isNew:
+            true
+    },
+    
+    {
+        title:
+            "Jelet Previous Year Questions Uploaded",
+
+        date:
+            "11 Aug 2026",
+
+        icon:
+            "🔥",
+
+        link:
+            "jelet.html",
+
+        isNew:
+            true
+    },
+
+
+    {
+        title:
+            "WBSCTE All Semester Syllabus Uploaded",
+
+        date:
+            "10 Aug 2026",
+
+        icon:
+            "🔥",
+
+        link:
+            "syllabus.html",
+
+        isNew:
+            true
+    }
+
+];
+
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function(){
+
+        const list =
+            document.getElementById(
+                "gszNotificationList"
+            );
+
+        const emptyMessage =
+            document.getElementById(
+                "gszNoNotification"
+            );
+
+        const viewAll =
+            document.getElementById(
+                "gszViewAllNotifications"
+            );
+
+
+        if(!list){
+            return;
+        }
+
+
+
+        /* Initially show 3 notifications */
+
+        let showAll = false;
+
+
+
+        function renderNotifications(){
+
+            list.innerHTML = "";
+
+
+            if(
+                gszNotifications.length === 0
+            ){
+
+                emptyMessage.style.display =
+                    "block";
+
+                return;
+
+            }
+
+
+            emptyMessage.style.display =
+                "none";
+
+
+            const notificationsToShow =
+                showAll
+
+                ? gszNotifications
+
+                : gszNotifications.slice(
+                    0,
+                    3
+                );
+
+
+
+            notificationsToShow.forEach(
+                function(notification){
+
+                    const item =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    item.className =
+                        "gsz-notification-item";
+
+
+                    item.innerHTML = `
+
+                        <div
+                            class="gsz-notification-icon"
+                        >
+                            ${notification.icon}
+                        </div>
+
+
+                        <div
+                            class="gsz-notification-content"
+                        >
+
+                            <div
+                                class="gsz-notification-top"
+                            >
+
+                                <h3
+                                    class="gsz-notification-title"
+                                >
+
+                                    ${notification.title}
+
+                                </h3>
+
+
+                                ${
+                                    notification.isNew
+
+                                    ?
+
+                                    `<span
+                                        class="gsz-new-badge"
+                                    >
+                                        NEW
+                                    </span>`
+
+                                    :
+
+                                    ""
+                                }
+
+                            </div>
+
+
+                            <p
+                                class="gsz-notification-date"
+                            >
+
+                                🕒 ${notification.date}
+
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            class="gsz-notification-link"
+
+                            href="${notification.link}"
+                        >
+
+                            View →
+
+                        </a>
+
+                    `;
+
+
+                    list.appendChild(item);
+
+                }
+            );
+
+
+            if(
+                gszNotifications.length <= 3
+            ){
+
+                viewAll.style.display =
+                    "none";
+
+            }
+            else{
+
+                viewAll.style.display =
+                    "inline-block";
+
+                viewAll.textContent =
+                    showAll
+                    ? "Show Less"
+                    : "View All";
+
+            }
+
+        }
+
+
+
+        /* View All Button */
+
+        viewAll.addEventListener(
+            "click",
+            function(){
+
+                showAll = !showAll;
+
+                renderNotifications();
+
+            }
+        );
+
+
+
+        /* Initial Render */
+
+        renderNotifications();
+
+    }
+);
